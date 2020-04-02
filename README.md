@@ -17,20 +17,22 @@ line containing:
 
     For example:
 
-    /data/imgs/img_001.jpg,837,346,981,456,cow
-    
-    /data/imgs/img_002.jpg,215,312,279,391,cat
+      train_images/VISUCI1_S1_20191204_143555_730_1.jpg,58,728,874,813,Trim
+      train_images/VISUCI1_S1_20191204_143555_730_1.jpg,293,878,361,1095,Wrinkle
+      train_images/VISUCI1_S1_20191204_204559_084_1.jpg,908,1,939,1093,Mistracking
 
     The classes will be inferred from the file. To use the simple parser instead of the default pascal voc style parser,
     use the command line option `-o simple`. For example `python train_frcnn.py -o simple -p my_data.txt`.
 
-- Running `train_frcnn.py` will write weights to disk to an hdf5 file, as well as all the setting of the training run to a `pickle` file. These
-settings can then be loaded by `test_frcnn.py` for any testing.
+- Running `train_frcnn.py` will write weights to disk to an hdf5 file, as well as all the setting of the training run to a `pickle` file. These settings can then be loaded by `test_frcnn.py` for any testing.
 
 - test_frcnn.py can be used to perform inference, given pretrained weights and a config file. Specify a path to the folder containing
 images:
     `python test_frcnn.py -p /path/to/test_data/`
-- Data augmentation can be applied by specifying `--hf` for horizontal flips, `--vf` for vertical flips and `--rot` for 90 degree rotations
+- Data augmentation can be applied by specifying `--hf` for horizontal flips, `--vf` for vertical flips and `--rot` for 90 degree rotations.
+- measure_map.py can be used  to calcualet mAP. Specify the folder containing annotations for test images(.txt file)
+    'python measure_map.py -o simple -p /path/to/test_annotation.txt/'
+
 
 
 
