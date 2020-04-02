@@ -283,7 +283,7 @@ for idx, img_data in enumerate(test_imgs):
 	#print(T)
 	#print(P)
 	
-	
+#	if the above code throws error, comment the code and uncomment the below code to get the mAP.
 	
 	
 # def non_max_suppression_fast(boxes, probs, overlap_thresh=0.9, max_boxes=300):
