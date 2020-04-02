@@ -4,6 +4,7 @@ cloned from https://github.com/yhenon/keras-frcnn/
 
 
 USAGE:
+- Use the xml2csv script to create the text file from xml files.
 - Both theano and tensorflow backends are supported. However compile times are very high in theano, and tensorflow is highly recommended.
 - `train_frcnn.py` can be used to train a model. To train on Pascal VOC data, simply do:
 `python train_frcnn.py -p /path/to/pascalvoc/`. 
