@@ -251,4 +251,5 @@ for idx, img_name in enumerate(sorted(os.listdir(img_path))):
 # 	cv2.imshow('img', img)
 # 	cv2.waitKey(0)
 # 	cv2.imwrite('./results_imgs/{}.png'.format(idx),img)
+#	create a folder named results_imgs if it is unable to create by itself
 	cv2.imwrite('/content/gdrive/My Drive/keras-frcnn-master/results_imgs/{}.jpg'.format(idx),img)
