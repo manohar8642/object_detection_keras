@@ -2,8 +2,6 @@
 Keras implementation of Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks.
 cloned from https://github.com/yhenon/keras-frcnn/
 
-Please note that I currently am quite busy with other projects and unfortunately dont have a lot of time to spend on this maintaining this repository, but any contributions are welcome!
-
 
 USAGE:
 - Both theano and tensorflow backends are supported. However compile times are very high in theano, and tensorflow is highly recommended.
@@ -25,7 +23,7 @@ line containing:
     use the command line option `-o simple`. For example `python train_frcnn.py -o simple -p my_data.txt`.
 
 - Running `train_frcnn.py` will write weights to disk to an hdf5 file, as well as all the setting of the training run to a `pickle` file. These settings can then be loaded by `test_frcnn.py` for any testing.
-
+- https://github.com/fchollet/keras/tree/master/keras/applications, here you can find the pretrained weights. download and add that into the folder.
 - test_frcnn.py can be used to perform inference, given pretrained weights and a config file. Specify a path to the folder containing
 images:
     `python test_frcnn.py -p /path/to/test_data/`
